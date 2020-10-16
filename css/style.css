@@ -185,47 +185,38 @@ p, .content ul, .content ol, img {
 
 /* COLORS -------------------------------------------------------- */
 
-.container {
-    background-color: #a3a8cc;
+body {
+    background-color: #cccccc;
+    color: black;
 }
 
-aside {
-    background-color: #999dbf;
+nav, .content a:hover {
+    background-color: #1a1a1a;
 }
 
-header, nav a:hover, footer {
-    background-color: #080b21;
-}
-
-header, nav a:hover {
-    color: #cd23b9;
-}
-
-.title a {
-    color: #cd23b9;
-    text-decoration: none;
-}
-
-nav {
-    background-color: #1f223d;
-    border-bottom: 10px solid #080b21;
-}
-
-nav, nav a, footer, footer a {
+nav, nav a, .content a:hover {
     color: white;
 }
 
-.content a {
-    color: #991a8a;  /* darker pink */
+nav a:hover {
+    background-color: #999999;
+    color: #1a1a1a;
+}
+
+.title a {
+    color: black;
+    text-decoration: none;
 }
 
 .content a:hover {
-    background-color: #080b21;
-    outline: 3px solid #080b21;
+    outline: 3px solid #1a1a1a;
     text-decoration: none;
-    color: #cd23b9;
 }
 
-.content a:visited {
-    color: gray;
+aside {
+    border-left: 1px dotted #1a1a1a;
+}
+
+footer {
+    border-top: 1px dotted #1a1a1a;
 }
