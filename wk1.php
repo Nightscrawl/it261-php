@@ -27,13 +27,13 @@
                 <div class="inner">
 
                     <ul>
-                        <li><a href="hw1.php">XAMPP</a></li>
-                        <li><a href="#">Using a Switch</a></li>
-                        <li><a href="#">Troubleshooting</a></li>
-                        <li><a href="#">Calculating Form</a></li>
-                        <li><a href="#">Email</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Database</a></li>
+                        <li><a href="wk1.php">XAMPP - 1</a></li>
+                        <li><a href="#">Switch - 3</a></li>
+                        <li><a href="#">Troubleshoot - 4</a></li>
+                        <li><a href="#">Calculator - 5</a></li>
+                        <li><a href="#">Email - 6</a></li>
+                        <li><a href="#">Gallery - 7</a></li>
+                        <li><a href="#">Database - 8</a></li>
                     </ul>
 
                 </div>
@@ -50,25 +50,32 @@
                         I am using XAMPP :).
                     </p>
 
-                    <img src="hw1/hw1-xampp-screen.jpg" alt="xampp up and running" />
+                    <img src="wk1/wk1-xampp-screen.jpg" alt="xampp up and running" />
 
-                    <img src="hw1/hw1-php-error.jpg" alt="php errors" />
+                    <img src="wk1/wk1-php-error.jpg" alt="php errors" />
 
-                    <a href="hw1/test_xampp.php">Click to see php errors!</a>
+                    <a href="wk1/test_xampp.php">Click to see php errors!</a>
 
                 </main>
 
                 <aside>
 
-                    <h2>Headline Two</h2>
+                    <h2>Classwork Assignments</h2>
 
-                    <p>
-                        Eget egestas purus viverra accumsan in nisl nisi scelerisque. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Aliquet nec ullamcorper sit amet. Odio facilisis mauris sit amet. Aliquam purus sit amet luctus venenatis.
-                    </p>
+                    <ul>
+                        <li>Week 2
+                            <ul>
+                                <li><a href="wk2/var.php">var.php</a></li>
+                                <li><a href="wk2/currency-logic.php">currency-logic.php</a></li>
+                                <li><a href="wk2/currency.php">currency.php</a></li>
+                                <li><a href="wk2/heredoc.php">heredoc.php</a></li>
+                            </ul></li>
+                    </ul>
 
-                    <p>
-                        Ultricies mi quis hendrerit dolor magna eget est lorem. Mauris in aliquam sem fringilla ut morbi tincidunt augue. Arcu cursus euismod quis viverra nibh cras. Amet justo donec enim diam vulputate ut pharetra. Molestie nunc non blandit massa enim nec dui. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum. Ultrices dui sapien eget mi proin.
-                    </p>
+                    <div class="final">
+                        <h3>Final Assignment</h3>
+                        <p>Stay tuned...</p>
+                    </div>
 
                 </aside>
 

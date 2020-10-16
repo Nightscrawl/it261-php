@@ -47,7 +47,7 @@ nav li {
 
 nav a {
     display: block;
-    padding: 10px;
+    padding: 10px 14px;
     text-decoration: none;
 }
 
@@ -86,13 +86,26 @@ footer {
     padding: 10px 0;
 }
 
+.final {
+    margin-top: 30px;
+    padding: 10px;
+}
+
 
 
 /* TYPOGRAPHY -------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 18px 0;
     font-variant: small-caps;
+    line-height: 100%;
+}
+
+h1, h2 {
+    margin: 20px 0;
+}
+
+h3, h4, h5, h6 {
+    margin: 16px 0;
 }
 
 h1:first-child, h2:first-child {
@@ -145,13 +158,22 @@ footer {
     text-transform: uppercase;
 }
 
-p, img {
+p, .content ul, .content ol, img {
     margin-bottom: 16px;
 }
 
 /* p:not(:last-of-type), img {
     margin-bottom: 16px;
 } */
+
+.content li {
+    padding-left: 10px;
+}
+
+.content li li {
+    list-style-type: circle;
+    list-style-position: inside;
+}
 
 .self {
     width: 250px;
