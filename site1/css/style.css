@@ -1,0 +1,222 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+    
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+    
+html {
+    font-size: 16px;
+}
+    
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+
+.container {
+    min-height: 100vh;
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "content"
+        "footer";
+
+    gap: 0;
+}
+
+
+
+header {
+    padding: 20px 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    padding: 10px 14px;
+    text-decoration: none;
+}
+
+
+.content {
+    padding: 20px 0;
+}
+
+.inner {
+    margin: 0 auto;
+    width: 85%;
+    max-width: 1280px;
+}
+
+.sidebar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.sidebar main {
+    width: 69%;
+}
+
+.sidebar aside {
+    width: 29%;
+    min-width: 250px;
+}
+
+main, aside {
+    padding: 10px;
+}
+
+
+footer {
+    padding: 10px 0;
+}
+
+.final {
+    margin-top: 30px;
+    padding: 10px;
+}
+
+
+
+/* TYPOGRAPHY -------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    font-variant: small-caps;
+    line-height: 100%;
+}
+
+h1, h2 {
+    margin: 20px 0;
+}
+
+h3, h4, h5, h6 {
+    margin: 16px 0;
+}
+
+h1:first-child, h2:first-child {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h5, h6 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+header {
+    text-align: left;
+}
+
+nav {
+    text-align: right;
+}
+
+.title {
+    margin: 0;
+    font-size: 2.5rem;
+    font-variant: small-caps;
+}
+
+main, aside {    
+    line-height: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    line-height: 1.25rem;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+}
+
+p, .content ul, .content ol, img {
+    margin-bottom: 16px;
+}
+
+/* p:not(:last-of-type), img {
+    margin-bottom: 16px;
+} */
+
+.content li {
+    padding-left: 10px;
+}
+
+.content li li {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+.self {
+    width: 250px;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+
+
+/* COLORS -------------------------------------------------------- */
+
+body {
+    background-color: #cccccc;
+    color: black;
+}
+
+nav, .content a:hover {
+    background-color: maroon;
+}
+
+nav, nav a, .content a:hover {
+    color: white;
+}
+
+nav a:hover {
+    background-color: #999999;
+    color: maroon;
+}
+
+.title a {
+    color: black;
+    text-decoration: none;
+}
+
+.content a:hover {
+    outline: 3px solid maroon;
+    text-decoration: none;
+}
+
+aside {
+    border-left: 1px dotted maroon;
+}
+
+footer {
+    border-top: 1px dotted maroon;
+}
