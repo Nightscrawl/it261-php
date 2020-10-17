@@ -30,7 +30,7 @@ switch($today) {
         $coffee = 'Monday is Americano Day';
         $pic = 'am.jpg';
         $alt = 'americano coffee';
-        $content = 'With a similar flavor to black coffee, the americano consists of an espresso shot diluted in hot water. Pro tip: if you’re making your own, pour the espresso first, then add the hot water.';
+        $content = 'With a similar flavor to black coffee, the americano consists of an espresso shot diluted in hot water. Pro tip: if you’re making your own, pour the espresso first, then add the hot water. '.$today.' ';
         $accent = 'mon';
     break;
 
@@ -38,7 +38,7 @@ switch($today) {
         $coffee = 'Tuesday is Espresso Day';
         $pic = 'esp.jpg';
         $alt = 'espresso coffee';
-        $content = 'An espresso shot can be served solo or used as the foundation of most coffee drinks, like lattes and macchiatos.';
+        $content = 'An espresso shot can be served solo or used as the foundation of most coffee drinks, like lattes and macchiatos. '.$today.' ';
         $accent = 'tue';
     break;
 
@@ -46,7 +46,7 @@ switch($today) {
         $coffee = 'Wednesday is Doppio Day';
         $pic = 'dop.jpg';
         $alt = 'doppio coffee';
-        $content = 'A double shot of espresso, the doppio is perfect for putting extra pep in your step.';
+        $content = 'A double shot of espresso, the doppio is perfect for putting extra pep in your step. '.$today.' ';
         $accent = 'wed';
     break;
 
@@ -54,7 +54,7 @@ switch($today) {
         $coffee = 'Thursday is Macchiato Day';
         $pic = 'macc.jpg';
         $alt = 'Macchiato';
-        $content = 'The macchiato is another espresso-based drink that has a small amount of foam on top. It’s the happy medium between a cappuccino and a doppio.';
+        $content = 'The macchiato is another espresso-based drink that has a small amount of foam on top. It’s the happy medium between a cappuccino and a doppio. '.$today.' ';
         $accent = 'thur';
     break;
 
@@ -62,7 +62,7 @@ switch($today) {
         $coffee = 'Friday is Mocha Day';
         $pic = 'mocha.jpg';
         $alt = 'mocha coffee';
-        $content = 'For all you chocolate lovers out there, you’ll fall in love with a mocha (or maybe you already have). The mocha is a chocolate espresso drink with steamed milk and foam.';
+        $content = 'For all you chocolate lovers out there, you’ll fall in love with a mocha (or maybe you already have). The mocha is a chocolate espresso drink with steamed milk and foam. '.$today.' ';
         $accent = 'fri';
     break;
 
@@ -70,7 +70,7 @@ switch($today) {
         $coffee = 'Saturday is Café au Lait Day';
         $pic = 'cafeaulait.jpg';
         $alt = 'café au lait';
-        $content = 'Café au lait is perfect for the coffee minimalist who wants a bit more flavor. Just add a splash of warm milk to your coffee and you’re all set!';
+        $content = 'Café au lait is perfect for the coffee minimalist who wants a bit more flavor. Just add a splash of warm milk to your coffee and you’re all set! '.$today.' ';
         $accent = 'sat';
     break;
 
@@ -78,7 +78,7 @@ switch($today) {
         $coffee = 'Sunday is Irish Day';
         $pic = 'irish.jpg';
         $alt = 'Irish coffee';
-        $content = 'Irish coffee consists of black coffee, whiskey and sugar, topped with whipped cream.';
+        $content = 'Irish coffee consists of black coffee, whiskey and sugar, topped with whipped cream. '.$today.' ';
         $accent = 'sun';
     break;
 }
