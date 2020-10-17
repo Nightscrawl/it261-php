@@ -1,3 +1,7 @@
+:root {
+    --accent-color: maroon;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -81,10 +85,15 @@ main, aside {
     padding: 10px;
 }
 
-
 footer {
     padding: 10px 0;
 }
+
+
+aside img {
+    width: 100%;
+}
+
 
 .final {
     margin-top: 30px;
@@ -191,7 +200,7 @@ body {
 }
 
 nav, .content a:hover {
-    background-color: maroon;
+    background-color: var(--accent-color);
 }
 
 nav, nav a, .content a:hover {
@@ -200,7 +209,7 @@ nav, nav a, .content a:hover {
 
 nav a:hover {
     background-color: #999999;
-    color: maroon;
+    color: var(--accent-color);
 }
 
 .title a {
@@ -209,14 +218,48 @@ nav a:hover {
 }
 
 .content a:hover {
-    outline: 3px solid maroon;
+    outline: 3px solid var(--accent-color);
     text-decoration: none;
 }
 
 aside {
-    border-left: 1px dotted maroon;
+    border-left: 1px dotted var(--accent-color);
 }
 
 footer {
-    border-top: 1px dotted maroon;
+    border-top: 1px dotted var(--accent-color);
 }
+
+
+.daily {
+    background-color: #889790;
+}
+
+        .mon {
+            --accent-color: darkgreen;
+        }
+
+        .tue {
+            --accent-color: navy;
+        }
+
+        .wed {
+            --accent-color: purple;
+        }
+
+        .thur {
+            --accent-color: darkgoldenrod;
+        }
+
+        .fri {
+            --accent-color: teal;
+        }
+
+        .sat {
+            --accent-color: dimgray;
+        }
+
+        .sun {
+            --accent-color: saddlebrown;
+        }
+

@@ -28,7 +28,7 @@
 
                     <ul>
                         <li><a href="wk1.php">XAMPP - 1</a></li>
-                        <li><a href="#">Switch - 3</a></li>
+                        <li><a href="site1/daily.php">Switch - 3</a></li>
                         <li><a href="#">Troubleshoot - 4</a></li>
                         <li><a href="#">Calculator - 5</a></li>
                         <li><a href="#">Email - 6</a></li>
@@ -69,6 +69,15 @@
                                 <li><a href="wk2/currency-logic.php">currency-logic.php</a></li>
                                 <li><a href="wk2/currency.php">currency.php</a></li>
                                 <li><a href="wk2/heredoc.php">heredoc.php</a></li>
+                            </ul></li>
+                    </ul>
+
+                    <ul>
+                        <li>Week 3
+                            <ul>
+                                <li><a href="wk3/arrays.php">arrays.php</a></li>
+                                <li><a href="wk3/if.php">if.php</a></li>
+                                <li><a href="wk3/switch.php">switch.php</a></li>
                             </ul></li>
                     </ul>
 
