@@ -81,6 +81,15 @@
                             </ul></li>
                     </ul>
 
+                    <ul>
+                        <li>Week 4
+                            <ul>
+                                <li><a href="wk4/form1.php">form1.php</a></li>
+                                <li><a href="wk4/form2.php">form2.php</a></li>
+                                <li><a href="wk4/adder.php">adder.php</a></li>
+                            </ul></li>
+                    </ul>
+
                     <div class="final">
                         <h3>Final Assignment</h3>
                         <p>Stay tuned...</p>
