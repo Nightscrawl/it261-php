@@ -68,7 +68,7 @@
                         echo '<p style="color:red;">so the answer is <br>' .$num2. '!</p>';
                     }
 
-                    elseif( empty($num2) && $num1) {  // if num2 is empty and num1 is present
+                    elseif( empty($num2) && $num1 ) {  // if num2 is empty and num1 is present
                         echo '<h2>You added nothing to ' .$num1. '</h2>';
                         echo '<p style="color:red;">so the answer is <br>' .$num1. '!</p>';
                     }
