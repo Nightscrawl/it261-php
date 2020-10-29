@@ -63,22 +63,22 @@
                     $num2 = $_POST['num2'];
                     // $myTotal = $num1 + $num2;
 
-                    if( empty($num1) && $num2 ) {
+                    if( empty($num1) && $num2 ) {  // if num1 is empty and num2 is present
                         echo '<h2>You added nothing to ' .$num2. '</h2>';
                         echo '<p style="color:red;">so the answer is <br>' .$num2. '!</p>';
                     }
 
-                    elseif( empty($num2) && $num1) {
+                    elseif( empty($num2) && $num1) {  // if num2 is empty and num1 is present
                         echo '<h2>You added nothing to ' .$num1. '</h2>';
                         echo '<p style="color:red;">so the answer is <br>' .$num1. '!</p>';
                     }
 
-                    elseif( empty($num1 && $num2) ) {
+                    elseif( empty($num1 && $num2) ) {  // if both are empty
                         echo '<p>Please enter at least one value.</p>';
                     }
 
                     else {
-                        $myTotal = $num1 + $num2;
+                        $myTotal = $num1 + $num2;  // add num1 and num2
                         echo '<h2>You added ' .$num1. ' and ' .$num2. '</h2>';
                         echo '<p style="color:red;">and the answer is <br>' .$myTotal. '!</p>';
                     }
