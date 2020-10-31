@@ -97,6 +97,10 @@
                                 <li><a href="wk5/currency-form2.php">currency-form2.php</a></li>
                                 <li><a href="wk5/currency-form2-sticky.php">currency-form2-sticky.php</a></li>
                                 <li><a href="wk5/currency-final.php">currency-final.php</a></li>
+                                <li><a href="wk5/calculator.php">calculator.php</a></li>
+                                <li><a href="wk5/calculator-days.php">calculator-days.php</a></li>
+                                <li><a href="wk5/calculator-days-errors.php">calculator-days-errors.php</a></li>
+                                <li><a href="wk5/calculator-days-errors-sticky.php">calculator-days-errors-sticky.php</a></li>
                             </ul></li>
                     </ul>
 
