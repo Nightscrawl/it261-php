@@ -185,6 +185,16 @@ p, .content ul, .content ol, img {
     margin: 0 10px 10px 0;
 }
 
+sub {
+    vertical-align: sub;
+    font-size: 50%;
+}
+
+sup {
+    vertical-align: super;
+    font-size: 50%;
+}
+
 
 
 /* COLORS -------------------------------------------------------- */
