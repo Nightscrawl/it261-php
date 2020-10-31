@@ -90,6 +90,16 @@
                             </ul></li>
                     </ul>
 
+                    <ul>
+                        <li>Week 5
+                            <ul>
+                                <li><a href="wk5/currency-form.php">currency-form.php</a></li>
+                                <li><a href="wk5/currency-form2.php">currency-form2.php</a></li>
+                                <li><a href="wk5/currency-form2-sticky.php">currency-form2-sticky.php</a></li>
+                                <li><a href="wk5/currency-final.php">currency-final.php</a></li>
+                            </ul></li>
+                    </ul>
+
                     <div class="final">
                         <h3>Final Assignment</h3>
                         <p>Stay tuned...</p>
