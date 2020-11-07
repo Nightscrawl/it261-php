@@ -40,6 +40,15 @@
                             </ul></li>
                     </ul>
 
+                    <ul>
+                        <li>Week 6
+                            <ul>
+                                <li><a href="wk6/form-emailable.php">form-emailable.php</a></li>
+                                <li><a href="wk6/functions.php">functions.php</a></li>
+                                <li><a href="wk6/website">website</a></li>
+                            </ul></li>
+                    </ul>
+
                     <div class="final">
                         <h3>Final Assignment</h3>
                         <p>Stay tuned...</p>
