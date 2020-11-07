@@ -45,6 +45,7 @@
                             <ul>
                                 <li><a href="wk6/form-emailable.php">form-emailable.php</a></li>
                                 <li><a href="wk6/functions.php">functions.php</a></li>
+                                <li><a href="wk6/random-count.php">random-count.php</a></li>
                                 <li><a href="wk6/website">website</a></li>
                             </ul></li>
                     </ul>
