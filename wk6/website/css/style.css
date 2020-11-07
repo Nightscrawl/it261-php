@@ -69,10 +69,22 @@ nav li {
     margin: 0 auto;
 }
 
+main {
+    width: 580px;
+    float: left;
+}
+
+aside {
+    width: 340px;
+    float: right;
+    background-color: lightblue;
+}
+
 footer {
     height: 50px;
     line-height: 50px;
     border-top: 1px dotted tan;
+    clear: both;
 }
 
 footer li {
@@ -100,4 +112,73 @@ h1 {
     font-size: 2em;
     font-weight: 200;
     margin-bottom: 9px;
+}
+
+
+
+/* form css */
+
+form {
+    max-width: 580px;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    padding: 10px;
+    padding-right: 15px;
+    color: #666;
+}
+
+label {
+    display: block;
+    margin-bottom: 14px;
+}
+
+input, select, ul, textarea {
+    margin: 4px 0;
+}
+
+input[type=text], input[type=email], input[type=telephone], textarea {
+    width: 100%;
+    height: 30px;
+}
+
+input[type=submit], .button {
+    padding: 2px 8px;
+}
+
+.button a {
+    color: black;
+    text-decoration: none;
+}
+
+textarea {
+    display: block;
+    height: 120px;
+}
+
+li {
+    list-style-type: none;
+    list-style-position: outside;
+    /* margin-left: 6px; */
+    /* text-indent: 0; */
+}
+
+p, h2 {
+    margin: 0 auto 10px;
+    text-align: center;
+}
+
+.box {
+    width: 600px;
+    margin: 20px auto;
+    background-color: beige;
+    padding: 20px;
+    border: 1px solid green;
+}
+
+span {
+    display: block;
+    color: red;
+    font-style: italic;
 }

@@ -3,7 +3,7 @@
 $firstName = '';
 $lastName = '';
 $email = '';
-// $phone = '';
+$tel = '';
 $gender = '';
 $wines = '';
 $comments = '';
@@ -13,7 +13,7 @@ $privacy = '';
 $firstNameErr = '';
 $lastNameErr = '';
 $emailErr = '';
-// $phoneErr = '';
+$telErr = '';
 $genderErr = '';
 $winesErr = '';
 $commentsErr = '';
@@ -79,21 +79,50 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {  // IF server has a request method of
     }
 
 
+    if( empty($_POST['tel']) ) {  // if empty, type in your number
+        $telErr = 'Please input your phone number.';
+    } elseif( array_key_exists('tel', $_POST) ) {
+        if( !preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['tel']) ) {  // if not typing in xxx-xxx-xxx, display invalid format
+            $telErr = 'Invalid format!';
+        } else {
+            $tel = $_POST['tel'];
+        }
+    }
+    
+
+    // if user checks the checkboxes, all of them, we want to know
+    // implode the array
+
+    function myWines() {
+        $myReturn = '';
+
+        if( !empty($_POST['wines']) ) {  // if it's not empty, take contents of array wines
+            $myReturn = implode(', ', $_POST['wines']);
+        }
+
+        return $myReturn;
+
+    } // end myWines
+
+
+
     if( isset(
         $_POST['firstName'],
         $_POST['lastName'],
         $_POST['email'],
+        $_POST['tel'],
         $_POST['gender'],
         $_POST['wines'],
         $_POST['comments'],
         $_POST['privacy']) ) {
 
-            $to = 'kira.abell@seattlecolleges.edu';
+            $to = 'kaynbell@gmail.com';
             $subject = 'test email on ' . date('m/d/y');
             $body = ''.$firstName. ' ' .$lastName. ' has filled out your form.' .PHP_EOL.'';
             $body .= 'Email: ' .$email. '' .PHP_EOL.'';
+            $body .= 'Phone: ' .$tel. '' .PHP_EOL.'';
             $body .= 'Gender: ' .$gender. '' .PHP_EOL.'';
-            $body .= 'Wines: ' .$wines. '' .PHP_EOL.'';
+            $body .= 'Wines: ' .myWines(). '' .PHP_EOL.'';
             $body .= 'Comments: ' .$comments. '' .PHP_EOL.'';
 
             $headers = array(
@@ -142,9 +171,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {  // IF server has a request method of
                 margin: 4px 0;
             }
 
-            input[type=text], input[type=email], textarea {
+            input[type=text], input[type=email], input[type=telephone], textarea {
                 width: 100%;
                 height: 30px;
+            }
+
+            input[type=submit], .button {
+                padding: 2px 8px;
+            }
+
+            .button a {
+                color: black;
+                text-decoration: none;
             }
             
             textarea {
@@ -210,12 +248,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {  // IF server has a request method of
                     <span><?php echo $emailErr; ?></span>
                 </label>
 
-                <!-- <label>
+                <label>
                     Phone
-                    <input type="text" name="phone" value="<?php 
-                        if( isset($_POST['phone']) ) echo htmlspecialchars( $_POST['phone'] ); ?>"><br />
-                    <span><?php echo $phoneErr; ?></span>
-                </label> -->
+                    <input type="telephone" name="tel" placeholder="xxx-xxx-xxxx" value="<?php 
+                        if( isset($_POST['tel']) ) echo htmlspecialchars( $_POST['tel'] ); ?>"><br />
+                    <span><?php echo $telErr; ?></span>
+                </label>
 
                 <label>
                     Gender
@@ -271,7 +309,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {  // IF server has a request method of
 
                 <input type="submit" value="Send">
 
-                <p><a href="">Reset form</a></p>
+                <button class="button"><a href="">Reset Form</a></button>
 
             </fieldset>
 

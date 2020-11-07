@@ -34,7 +34,7 @@ switch(THIS_PAGE) {
     case 'contact.php' :
         $title = 'Contact us today';
         $mainHeadline = 'Welcome to Our Contact Page';
-        $center = 'center';
+        // $center = 'center';
         $body = 'contact inner';
     break;
 
@@ -70,3 +70,157 @@ function makeLinks($n) {
     return $myReturn;
 
 }  // end function makeLinks
+
+
+$photos[] = 'photo1';
+$photos[] = 'photo2';
+$photos[] = 'photo3';
+$photos[] = 'photo4';
+$photos[] = 'photo5';
+
+function randImages($p) {
+    $i = rand( 0, count($p)-1 );
+    $selectedImages = 'img/'.$p[$i].'.jpg';
+    $alt = ''.$p[$i].'';
+    echo '<img src="'.$selectedImages.'" alt="'.$alt.'" />';
+}
+
+
+// FORM
+
+$firstName = '';
+$lastName = '';
+$email = '';
+$tel = '';
+$gender = '';
+$wines = '';
+$comments = '';
+$privacy = '';
+    // because code is moved, must now initialize vars
+
+$firstNameErr = '';
+$lastNameErr = '';
+$emailErr = '';
+$telErr = '';
+$genderErr = '';
+$winesErr = '';
+$commentsErr = '';
+$privacyErr = '';
+
+
+if($_SERVER['REQUEST_METHOD'] == 'POST') {  // IF server has a request method of post, do the following
+
+    // IF name is empty, create var $nameErr and say, "please fill out your name" and assign to var
+    // if NOT empty, $name = $_POST['name']
+
+    // delcare errors - if field is empty, do something
+    // a lot of IF statements - if all IF statements are true, then yay
+
+    if( empty($_POST['firstName']) ) {  // always declare emptys at the top
+        $firstNameErr = 'Please fill out your first name.';
+    } else {
+        $firstName = $_POST['firstName'];  // IF empty, display error, else assn the post name to var $name
+    }
+
+    if( empty($_POST['lastName']) ) {
+        $lastNameErr = 'Please fill out your last name.';
+    } else {
+        $lastName = $_POST['lastName'];
+    }
+
+    if( empty($_POST['email']) ) {
+        $emailErr = 'Please fill out your email.';
+    } else {
+        $email = $_POST['email'];
+    }
+
+    if( empty($_POST['gender']) ) {
+        $genderErr = 'Please select your gender.';
+    } else {
+        $gender = $_POST['gender'];
+    }
+
+    if($gender == 'male') {
+        $male = 'checked';
+    } elseif($gender == 'female') {
+        $female = 'checked';
+    } elseif($gender == 'prefer not to say') {
+        $xgender = 'checked';
+    }
+
+    if( empty($_POST['wines']) ) {
+        $winesErr = 'Please pick a wine.';
+    } else {
+        $wines = $_POST['wines'];
+    }
+
+    if( empty($_POST['comments']) ) {
+        $commentsErr = "Don't forget to leave a comment!";
+    } else {
+        $comments = $_POST['comments'];
+    }
+
+    if( empty($_POST['privacy']) ) {
+        $privacyErr = 'Please agree to our privacy policy.';
+    } else {
+        $privacy = $_POST['privacy'];
+    }
+
+
+    if( empty($_POST['tel']) ) {  // if empty, type in your number
+        $telErr = 'Please input your phone number.';
+    } elseif( array_key_exists('tel', $_POST) ) {
+        if( !preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['tel']) ) {  // if not typing in xxx-xxx-xxx, display invalid format
+            $telErr = 'Invalid format!';
+        } else {
+            $tel = $_POST['tel'];
+        }
+    }
+    
+
+    // if user checks the checkboxes, all of them, we want to know
+    // implode the array
+
+    function myWines() {
+        $myReturn = '';
+
+        if( !empty($_POST['wines']) ) {  // if it's not empty, take contents of array wines
+            $myReturn = implode(', ', $_POST['wines']);
+        }
+
+        return $myReturn;
+
+    } // end myWines
+
+
+
+    if( isset(
+        $_POST['firstName'],
+        $_POST['lastName'],
+        $_POST['email'],
+        $_POST['tel'],
+        $_POST['gender'],
+        $_POST['wines'],
+        $_POST['comments'],
+        $_POST['privacy']) ) {
+
+            $to = 'kaynbell@gmail.com';
+            $subject = 'test email on ' . date('m/d/y');
+            $body = ''.$firstName. ' ' .$lastName. ' has filled out your form.' .PHP_EOL.'';
+            $body .= 'Email: ' .$email. '' .PHP_EOL.'';
+            $body .= 'Phone: ' .$tel. '' .PHP_EOL.'';
+            $body .= 'Gender: ' .$gender. '' .PHP_EOL.'';
+            $body .= 'Wines: ' .myWines(). '' .PHP_EOL.'';
+            $body .= 'Comments: ' .$comments. '' .PHP_EOL.'';
+
+            $headers = array(
+                'From' => 'no-reply@nightscrawl.net',  // obfuscate self mail
+                'Reply-to' => ''.$email.''  // info to reply to sender
+            );
+
+            mail($to, $subject, $body, $headers);
+                header('Location: thx.php');
+                
+        } // end isset
+
+} // close server request method

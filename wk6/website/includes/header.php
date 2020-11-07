@@ -15,7 +15,7 @@
 
             <div class="inner-header">
 
-                <img class="logo" src="img/logo.png" alt="logo"/>
+                <img class="logo" src="img/logo.png" alt="logo" />
 
                 <nav>
 
