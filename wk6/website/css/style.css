@@ -166,6 +166,10 @@ li {
 
 p, h2 {
     margin: 0 auto 10px;
+    /* text-align: center; */
+}
+
+.center {
     text-align: center;
 }
 

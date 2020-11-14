@@ -14,7 +14,7 @@ include('includes/header.php');
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer malesuada nunc vel risus commodo viverra. A diam sollicitudin tempor id eu nisl nunc mi ipsum."
     </blockquote>
 
-    <p><a href="https://github.com/Nightscrawl/it261-php/tree/main/wk6/website">Extra credit link to GitHub.</a></p>
+    <p class="center"><a href="https://github.com/Nightscrawl/it261-php/tree/main/wk6/website">Extra credit link to GitHub.</a></p>
 
 
 <?php include('includes/footer.php'); ?>   

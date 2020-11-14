@@ -32,47 +32,64 @@
         </label>
 
         <label>
-            Gender
-            <ul>  <!-- if post gender was set
-                        is the post gender equal to the value? -->
-                <li><input type="radio" name="gender" value="male"
-                    <?php if( isset($_POST['gender']) && $_POST['gender'] == 'male' ) echo 'checked="checked"'; ?>> Male</li>
-
-                <li><input type="radio" name="gender" value="female"
-                    <?php if( isset($_POST['gender']) && $_POST['gender'] == 'female' ) echo 'checked="checked"'; ?>> Female</li>
-
-                <li><input type="radio" name="gender" value="prefer not to say"
-                    <?php if( isset($_POST['gender']) && $_POST['gender'] == 'prefer not to say' ) echo 'checked="checked"'; ?>> Prefer not to say</li>
-            </ul>
-            <span><?php echo $genderErr; ?></span>                    
-        </label>
-
-        <label>
-            Favorite Wines
+            Are you a returning customer?
             <ul>
-                <li><input type="checkbox" name="wines[]" value="cabernet"
-                    <?php if( isset($_POST['wines']) && $_POST['wines'] == 'cabernet' ) echo 'checked="checked"'; ?>> Cabernet</li>
+                <li><input type="radio" name="returnCust" value="yes"
+                    <?php if( isset($_POST['returnCust']) && $_POST['returnCust'] == 'yes' ) echo 'checked="checked"'; ?>> Yes</li>
 
-                <li><input type="checkbox" name="wines[]" value="merlot"
-                    <?php if( isset($_POST['wines']) && $_POST['wines'] == 'merlot' ) echo 'checked="checked"'; ?>> Merlot</li>
-
-                <li><input type="checkbox" name="wines[]" value="syrah"
-                    <?php if( isset($_POST['wines']) && $_POST['wines'] == 'syrah' ) echo 'checked="checked"'; ?>> Syrah</li>
-
-                <li><input type="checkbox" name="wines[]" value="malbec"
-                    <?php if( isset($_POST['wines']) && $_POST['wines'] == 'malbec' ) echo 'checked="checked"'; ?>> Malbec</li>
-
-                <li><input type="checkbox" name="wines[]" value="pinot"
-                    <?php if( isset($_POST['wines']) && $_POST['wines'] == 'pinot' ) echo 'checked="checked"'; ?>> Pinot Noir</li>
-
-                <li><input type="checkbox" name="wines[]" value="zinfandel"
-                    <?php if( isset($_POST['wines']) && $_POST['wines'] == 'zinfandel' ) echo 'checked="checked"'; ?>> Zinfandel</li>
+                <li><input type="radio" name="returnCust" value="no"
+                    <?php if( isset($_POST['returnCust']) && $_POST['returnCust'] == 'no' ) echo 'checked="checked"'; ?>> No</li>
             </ul>
-            <span><?php echo $winesErr; ?></span>                                        
+            <span><?php echo $returnCustErr; ?></span>                    
         </label>
 
         <label>
-            Comments
+            What is your favorite ASP album?
+            <ul>
+                <li><input type="checkbox" name="albums[]" value="vermisst"
+                    <?php if( isset($_POST['albums']) && $_POST['albums'] == 'vermisst' ) echo 'checked="checked"'; ?>> Hast du mich vermisst?</li>
+
+                <li><input type="checkbox" name="albums[]" value="duett"
+                    <?php if( isset($_POST['albums']) && $_POST['albums'] == 'duett' ) echo 'checked="checked"'; ?>> :Duett</li>
+
+                <li><input type="checkbox" name="albums[]" value="weltunter"
+                    <?php if( isset($_POST['albums']) && $_POST['albums'] == 'weltunter' ) echo 'checked="checked"'; ?>> Weltunter</li>
+
+                <li><input type="checkbox" name="albums[]" value="aus der tiefe"
+                    <?php if( isset($_POST['albums']) && $_POST['albums'] == 'aus der tiefe' ) echo 'checked="checked"'; ?>> Aus der Tiefe</li>
+
+                <li><input type="checkbox" name="albums[]" value="requiembryo"
+                    <?php if( isset($_POST['albums']) && $_POST['albums'] == 'requiembryo' ) echo 'checked="checked"'; ?>> Requiembryo</li>
+
+                <li><input type="checkbox" name="albums[]" value="zaubererbruder"
+                    <?php if( isset($_POST['albums']) && $_POST['albums'] == 'zaubererbruder' ) echo 'checked="checked"'; ?>> Zaubererbruder</li>
+
+                <li><input type="checkbox" name="albums[]" value="fremd"
+                    <?php if( isset($_POST['albums']) && $_POST['albums'] == 'fremd' ) echo 'checked="checked"'; ?>> fremd</li>
+
+                <li><input type="checkbox" name="albums[]" value="maskenhaft"
+                    <?php if( isset($_POST['albums']) && $_POST['albums'] == 'maskenhaft' ) echo 'checked="checked"'; ?>> Maskenhaft – Ein Versinken in elf Bildern</li>
+
+                <li><input type="checkbox" name="albums[]" value="astoria"
+                    <?php if( isset($_POST['albums']) && $_POST['albums'] == 'astoria' ) echo 'checked="checked"'; ?>> Verfallen (Zweiteiler), Folge 1: Astoria</li>
+
+                <li><input type="checkbox" name="albums[]" value="fassaden"
+                    <?php if( isset($_POST['albums']) && $_POST['albums'] == 'fassaden' ) echo 'checked="checked"'; ?>> Verfallen (Zweiteiler), Folge 2: Fassaden</li>
+
+                <li><input type="checkbox" name="albums[]" value="geisterfahrer"
+                    <?php if( isset($_POST['albums']) && $_POST['albums'] == 'geisterfahrer' ) echo 'checked="checked"'; ?>> Das GeistErfahrer Langspielalbum</li>
+
+                <li><input type="checkbox" name="albums[]" value="zutiefst"
+                    <?php if( isset($_POST['albums']) && $_POST['albums'] == 'zutiefst' ) echo 'checked="checked"'; ?>> zutiefst ASP</li>
+
+                <li><input type="checkbox" name="albums[]" value="kosmonautilus"
+                    <?php if( isset($_POST['albums']) && $_POST['albums'] == 'sosmonautilus' ) echo 'checked="checked"'; ?>> Kosmonautilus</li>
+            </ul>
+            <span><?php echo $albumsErr; ?></span>                                        
+        </label>
+
+        <label>
+            Tell us why!
             <textarea name="comments"><?php if( isset($_POST['comments']) ) echo htmlspecialchars( $_POST['comments'] ); ?></textarea>
             <span><?php echo $commentsErr; ?></span>
         </label>

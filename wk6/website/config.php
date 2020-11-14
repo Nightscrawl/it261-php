@@ -38,6 +38,13 @@ switch(THIS_PAGE) {
         $body = 'contact inner';
     break;
 
+    case 'thx.php' :
+        $title = 'Thank you!';
+        $mainHeadline = 'Thank you!';
+        // $center = 'center';
+        $body = 'contact inner';
+    break;
+
     case 'gallery.php' :
         $title = 'Check out our gallery';
         $mainHeadline = '';
@@ -92,8 +99,8 @@ $firstName = '';
 $lastName = '';
 $email = '';
 $tel = '';
-$gender = '';
-$wines = '';
+$returnCust = '';
+$albums = '';
 $comments = '';
 $privacy = '';
     // because code is moved, must now initialize vars
@@ -102,8 +109,8 @@ $firstNameErr = '';
 $lastNameErr = '';
 $emailErr = '';
 $telErr = '';
-$genderErr = '';
-$winesErr = '';
+$returnCustErr = '';
+$albumsErr = '';
 $commentsErr = '';
 $privacyErr = '';
 
@@ -134,24 +141,22 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {  // IF server has a request method of
         $email = $_POST['email'];
     }
 
-    if( empty($_POST['gender']) ) {
-        $genderErr = 'Please select your gender.';
+    if( empty($_POST['returnCust']) ) {
+        $returnCustErr = 'Please select one.';
     } else {
-        $gender = $_POST['gender'];
+        $returnCust = $_POST['returnCust'];
     }
 
-    if($gender == 'male') {
-        $male = 'checked';
-    } elseif($gender == 'female') {
-        $female = 'checked';
-    } elseif($gender == 'prefer not to say') {
-        $xgender = 'checked';
+    if($returnCust == 'yes') {
+        $yes = 'checked';
+    } elseif($returnCust == 'no') {
+        $no = 'checked';
     }
 
-    if( empty($_POST['wines']) ) {
-        $winesErr = 'Please pick a wine.';
+    if( empty($_POST['albums']) ) {
+        $albumsErr = 'You forgot to select an album...';
     } else {
-        $wines = $_POST['wines'];
+        $albums = $_POST['albums'];
     }
 
     if( empty($_POST['comments']) ) {
@@ -181,11 +186,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {  // IF server has a request method of
     // if user checks the checkboxes, all of them, we want to know
     // implode the array
 
-    function myWines() {
+    function favAlbums() {
         $myReturn = '';
 
-        if( !empty($_POST['wines']) ) {  // if it's not empty, take contents of array wines
-            $myReturn = implode(', ', $_POST['wines']);
+        if( !empty($_POST['albums']) ) {  // if it's not empty, take contents of array wines
+            $myReturn = implode(', ', $_POST['albums']);
         }
 
         return $myReturn;
@@ -199,8 +204,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {  // IF server has a request method of
         $_POST['lastName'],
         $_POST['email'],
         $_POST['tel'],
-        $_POST['gender'],
-        $_POST['wines'],
+        $_POST['returnCust'],
+        $_POST['albums'],
         $_POST['comments'],
         $_POST['privacy']) ) {
 
@@ -209,9 +214,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {  // IF server has a request method of
             $body = ''.$firstName. ' ' .$lastName. ' has filled out your form.' .PHP_EOL.'';
             $body .= 'Email: ' .$email. '' .PHP_EOL.'';
             $body .= 'Phone: ' .$tel. '' .PHP_EOL.'';
-            $body .= 'Gender: ' .$gender. '' .PHP_EOL.'';
-            $body .= 'Wines: ' .myWines(). '' .PHP_EOL.'';
-            $body .= 'Comments: ' .$comments. '' .PHP_EOL.'';
+            $body .= 'Returning customer? ' .$returnCust. '' .PHP_EOL.'';
+            $body .= 'Favorite album: ' .favAlbums(). '' .PHP_EOL.'';
+            $body .= 'Why? ' .$comments. '' .PHP_EOL.'';
 
             $headers = array(
                 'From' => 'no-reply@nightscrawl.net',  // obfuscate self mail
