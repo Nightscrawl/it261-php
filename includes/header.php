@@ -32,7 +32,7 @@
                         <li><a href="wk4.php">Troubleshoot - 4</a></li>
                         <li><a href="wk5.php">Calculator - 5</a></li>
                         <li><a href="wk6/website/contact.php">Email - 6</a></li>
-                        <li><a href="#">Gallery - 7</a></li>
+                        <li><a href="website/contact.php">Gallery - 7</a></li>
                         <li><a href="#">Database - 8</a></li>
                     </ul>
 

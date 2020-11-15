@@ -50,6 +50,14 @@
                             </ul></li>
                     </ul>
 
+                    <ul>
+                        <li>Week 7
+                            <ul>
+                                <li><a href="wk7/substr-str_replace.php">substr-str_replace.php</a></li>
+                                <li><a href="website/gallery.php">gallery</a></li>
+                            </ul></li>
+                    </ul>
+
                     <div class="final">
                         <h3>Final Assignment</h3>
                         <p>Stay tuned...</p>
