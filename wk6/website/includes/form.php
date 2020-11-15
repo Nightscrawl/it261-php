@@ -3,36 +3,36 @@
 
     <fieldset>
 
-        <label>
+        <label class="label-input">
             First Name
             <input type="text" name="firstName" value="<?php 
                 if( isset($_POST['firstName']) ) echo htmlspecialchars( $_POST['firstName'] ); ?>"><br />  <!-- if isset post name is set, then show the post name -->
             <span><?php echo $firstNameErr; ?></span>
         </label>
 
-        <label>
+        <label class="label-input">
             Last Name
             <input type="text" name="lastName" value="<?php 
                 if( isset($_POST['lastName']) ) echo htmlspecialchars( $_POST['lastName'] ); ?>"><br />
             <span><?php echo $lastNameErr; ?></span>
         </label>
 
-        <label>
+        <label class="label-input">
             Email
             <input type="email" name="email" value="<?php 
                 if( isset($_POST['email']) ) echo htmlspecialchars( $_POST['email'] ); ?>"><br />
             <span><?php echo $emailErr; ?></span>
         </label>
 
-        <label>
+        <label class="label-input">
             Phone
-            <input type="telephone" name="tel" placeholder="xxx-xxx-xxxx" value="<?php 
+            <input type="tel" name="tel" placeholder="xxx-xxx-xxxx" value="<?php 
                 if( isset($_POST['tel']) ) echo htmlspecialchars( $_POST['tel'] ); ?>"><br />
             <span><?php echo $telErr; ?></span>
         </label>
 
-        <label>
-            Are you a returning customer?
+        <div class="form-box">
+            <label>Are you a returning customer?</label>
             <ul>
                 <li><input type="radio" name="returnCust" value="yes"
                     <?php if( isset($_POST['returnCust']) && $_POST['returnCust'] == 'yes' ) echo 'checked="checked"'; ?>> Yes</li>
@@ -41,10 +41,10 @@
                     <?php if( isset($_POST['returnCust']) && $_POST['returnCust'] == 'no' ) echo 'checked="checked"'; ?>> No</li>
             </ul>
             <span><?php echo $returnCustErr; ?></span>                    
-        </label>
+        </div>
 
-        <label>
-            What is your favorite ASP album?
+        <div class="form-box">
+            <label>What is your favorite ASP album?</label>
             <ul>
                 <li><input type="checkbox" name="albums[]" value="vermisst"
                     <?php if( isset($_POST['albums']) && $_POST['albums'] == 'vermisst' ) echo 'checked="checked"'; ?>> Hast du mich vermisst?</li>
@@ -86,23 +86,24 @@
                     <?php if( isset($_POST['albums']) && $_POST['albums'] == 'sosmonautilus' ) echo 'checked="checked"'; ?>> Kosmonautilus</li>
             </ul>
             <span><?php echo $albumsErr; ?></span>                                        
-        </label>
+        </div>
 
-        <label>
+        <label class="label-input">
             Tell us why!
             <textarea name="comments"><?php if( isset($_POST['comments']) ) echo htmlspecialchars( $_POST['comments'] ); ?></textarea>
             <span><?php echo $commentsErr; ?></span>
         </label>
 
-        <label>
+        <label class="label-input">
             <input type="radio" name="privacy" value="<?php 
                     if( isset($_POST['privacy']) ) echo htmlspecialchars( $_POST['privacy'] ); ?>"> I agree to your privacy policy
             <span><?php echo $privacyErr; ?></span>                    
         </label>
 
-        <input type="submit" value="Send">
-
-        <button class="button"><a href="">Reset Form</a></button>
+        <input type="submit" value="Send" />
+        
+        <p class="reset"><a href="">Reset Form</a></p>
+        
 
     </fieldset>
 
