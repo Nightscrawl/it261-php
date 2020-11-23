@@ -58,6 +58,13 @@
                             </ul></li>
                     </ul>
 
+                    <ul>
+                        <li>Week 8
+                            <ul>
+                                <li><a href="wk8/people.php">people.php</a></li>
+                            </ul></li>
+                    </ul>
+
                     <div class="final">
                         <h3>Final Assignment</h3>
                         <p>Stay tuned...</p>
