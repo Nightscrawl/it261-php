@@ -25,6 +25,23 @@ $people['Julian_Castro'] = 'castr Housing/Urban from TX';
 
 
 
+$gallery_albums['Hast du mich vermisst?'] = 'asp 2000';
+$gallery_albums[':Duett'] = 'asp 2001';
+$gallery_albums['Weltunter'] = 'asp 2002';
+$gallery_albums['Aus der Tiefe'] = 'asp 2003';
+$gallery_albums['Requiembryo'] = 'asp 2004';
+$gallery_albums['Zaubererbruder'] = 'asp 2005';
+$gallery_albums['fremd'] = 'asp 2006';
+$gallery_albums['Maskenhaft – Ein Versinken in elf Bildern'] = 'asp 2007';
+$gallery_albums['Verfallen (Zweiteiler), Folge 1: Astoria'] = 'asp 2008';
+$gallery_albums['Verfallen (Zweiteiler), Folge 2: Fassaden'] = 'asp 2009';
+$gallery_albums['Das GeistErfahrer Langspielalbum'] = 'asp 2010';
+$gallery_albums['zutiefst ASP'] = 'asp 2011';
+$gallery_albums['Kosmonautilus'] = 'asp 2012';
+
+
+
+
 
 switch(THIS_PAGE) {
     case 'index.php' :
@@ -71,7 +88,7 @@ switch(THIS_PAGE) {
 
     case 'gallery.php' :
         $title = 'Check out our gallery';
-        $mainHeadline = 'Welcome to the Candidates Gallery Page';
+        $mainHeadline = 'Welcome to the Album Page';
         // $center = 'center';
         $body = 'gallery inner';
     break;
@@ -133,6 +150,28 @@ function randImages2($c) {
     $i = rand( 0, count($c)-1 );
     $selectedImages = 'img/'.$c[$i].'.jpg';
     $alt = ''.$c[$i].'';
+    echo '<img src="'.$selectedImages.'" alt="'.$alt.'" />';
+}
+
+
+$art[] = 'asp1';
+$art[] = 'asp2';
+$art[] = 'asp3';
+$art[] = 'asp4';
+$art[] = 'asp5';
+$art[] = 'asp6';
+$art[] = 'asp7';
+$art[] = 'asp8';
+$art[] = 'asp9';
+$art[] = 'asp10';
+$art[] = 'asp11';
+$art[] = 'asp12';
+$art[] = 'asp13';
+
+function randImages3($a) {
+    $i = rand( 0, count($a)-1 );
+    $selectedImages = 'img/'.$a[$i].'.jpg';
+    $alt = ''.$a[$i].'';
     echo '<img src="'.$selectedImages.'" alt="'.$alt.'" />';
 }
 

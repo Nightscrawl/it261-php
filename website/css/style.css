@@ -181,20 +181,34 @@ p, h2 {
 }
 
 table {
-    border: 1px solid tan;
+    border: 1px solid black;
     width: 580px;
-    padding: 20px;
+    padding: 5px;
     margin-bottom: 20px;
 }
 
-.candidates td:nth-child(1), 
-.candidates td:nth-child(2) {
-    width: 150px;
+td {
+    border: 1px solid gray;
 }
 
-.candidates td:nth-child(2) {
-    padding-left: 20px;
+
+.albums td:nth-child(1) {
+    width: 30%;
 }
+
+.albums td:nth-child(2) {
+    width: 50%;
+    text-align: center;
+}
+
+.albums td:nth-child(3) {
+    width: 20%;
+    text-align: center;
+}
+
+/* .albums td:nth-child(2) {
+    padding-left: 20px;
+} */
 
 .center {
     text-align: center;
