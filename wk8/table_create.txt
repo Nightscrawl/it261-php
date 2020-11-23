@@ -1,0 +1,11 @@
+CREATE TABLE People (
+
+PeopleID int auto_increment primary key,
+FirstName varchar (15) not null,
+LastName varchar (20) not null,
+Occupation varchar (30) not null,
+Email varchar (30) not null,
+RegDate date,
+Description longtext
+
+)

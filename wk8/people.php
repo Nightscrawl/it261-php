@@ -35,7 +35,7 @@ if( mysqli_num_rows($result) > 0 ) {  // show the records
         }
 
         echo '<ul>';  // use similar href as daily switch
-        echo '<li class="bold">For more information on <a href="people_view.php?id='.$row['PeopleID'].'">'.$row['FirstName'].'</a></li>';
+        echo '<li class="bold">For more information on <a href="people-view.php?id='.$row['PeopleID'].'">'.$row['FirstName'].'</a></li>';
         echo '<li>'.$row['FirstName'].' '.$row['LastName'].'</li>';
         echo '<li>'.$gender.' Occupation: '.$row['Occupation'].'</li>';
         echo '</ul>';
