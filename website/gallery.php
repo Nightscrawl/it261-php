@@ -39,11 +39,11 @@ include('includes/header.php');
     <aside>
         <h3>Here is a random album!</h3>
 
-        <?php echo randImages2($art); ?>
+        <?php echo randImages3($art); ?>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer malesuada nunc vel risus commodo viverra. A diam sollicitudin tempor id eu nisl nunc mi ipsum.</p>
 
     </aside>
-    
+
 
 <?php include('includes/footer.php'); ?>   
