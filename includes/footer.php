@@ -65,6 +65,13 @@
                             </ul></li>
                     </ul>
 
+                    <ul>
+                        <li>Week 9
+                            <ul>
+                                <li><a href="wk9/">login and register</a></li>
+                            </ul></li>
+                    </ul>
+
                     <div class="final">
                         <h3>Final Assignment</h3>
                         <p>Stay tuned...</p>
