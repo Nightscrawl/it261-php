@@ -1,10 +1,10 @@
 <?php
 
-// ob_start();  // prevents header errors before reading the whole page
+ob_start();  // prevents header errors before reading the whole page
 
-// define('DEBUG', 'TRUE');  // shows errors
+define('DEBUG', 'TRUE');  // shows errors
 
-// include('creds.php');
+include('creds.php');
 
 define( 'THIS_PAGE', basename($_SERVER['PHP_SELF']) );  // the page that i'm on is the page that i'm on
 
@@ -65,12 +65,19 @@ switch(THIS_PAGE) {
         $body = 'daily inner';
     break;
 
-    case 'customers.php' :
-        $title = 'Our very important cutomers';
-        $mainHeadline = 'Hello Customers, Good to See You!';
+    case 'da-followers.php' :
+        $title = 'Dragon Age Followers';
+        $mainHeadline = 'Dragon Age Followers';
         $center = 'center';
-        $body = 'customers inner';
+        $body = 'followers inner';
     break;
+
+    // case 'da-followers-view.php?id='.$followerID.'';
+    //     $title = 'Dragon Age Followers - '.$followerName.'';
+    //     $mainHeadline = 'Dragon Age Followers';
+    //     $center = 'center';
+    //     $body = 'followers inner';
+    // break;
 
     case 'contact.php' :
         $title = 'Contact us today';
@@ -98,7 +105,7 @@ switch(THIS_PAGE) {
 $nav['index.php'] = 'Home';
 $nav['about.php'] = 'About';
 $nav['daily.php'] = 'Daily';
-$nav['customers.php'] = 'Customers';
+$nav['da-followers.php'] = 'Dragon Age Followers';
 $nav['contact.php'] = 'Contact';
 $nav['gallery.php'] = 'Gallery';
 
@@ -318,13 +325,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {  // IF server has a request method of
 
 
 // placed at the very bottom of the config file
-// function myerror($myFile, $myLine, $errorMsg) {
-//     if( defined('DEBUG') && DEBUG ) {
-//         echo 'Error in file: <b>' .$myFile. '</b> on line: <b>' .$myLine. '</b>';
-//         echo 'Error message: <b>' .$errorMsg. '</b>';
-//         die();
-//     } else {
-//         echo 'Houston, we have a problem!';
-//         die();
-//     }
-// }
+function myerror($myFile, $myLine, $errorMsg) {
+    if( defined('DEBUG') && DEBUG ) {
+        echo 'Error in file: <b>' .$myFile. '</b> on line: <b>' .$myLine. '</b>';
+        echo 'Error message: <b>' .$errorMsg. '</b>';
+        die();
+    } else {
+        echo 'Houston, we have a problem!';
+        die();
+    }
+}
